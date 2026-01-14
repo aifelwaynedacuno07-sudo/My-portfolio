@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Pink Portfolio</title>
+
+  <style>
+    :root {
+      --pink-dark: #b83280;
+      --pink-main: #ff5fa2;
+      --pink-light: #ffe4ef;
+      --pink-soft: #fff0f7;
+      --text-dark: #FF1DD8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--pink-soft);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--pink-main), var(--pink-dark));
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .home {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .home img {
+      width: 260px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(255, 95, 162, 0.4);
+    }
+
+    .home h1 {
+      font-size: 3rem;
+      color: var(--pink-dark);
+    }
+
+    .home p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+    }
+
+    .about, .skills, .contact {
+      background: var(--pink-light);
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: var(--pink-main);
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      font-weight: 600;
+      color: var(--pink-dark);
+      box-shadow: 0 8px 20px rgba(255, 95, 162, 0.2);
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--pink-dark);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .home {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="home">
+    <img src="IMG_20241106_113533.jpg" alt="Profile Picture">
+    <div>
+      <h1>I'm Aifel Wayne Dacuno</h1>
+      <p>
+        A passionate creator who loves design, creativity, and turning ideas
+        into beautiful digital experiences. Especially in a theme of pink. 
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a motivated individual who enjoys learning new technologies and
+      expressing creativity through web design. I believe that great design
+      comes from simplicity, passion, and attention to detail. I love creating things with a theme and shades of pink.🌷🩷
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">UI / UX Design</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Creativity</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: aifeldacuno@email.com</p>
+    <p>GitHub: github.com/aifeldacuno</p>
+    <p>Instagram: @aifeldacuno</p>
+  </section>
+
+  <footer>
+    © 2026 aifel dacuno — Pink Portfolio
+  </footer>
+
+  <script>
+    // Smooth scroll animation
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute("href"))
+          .scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+
+</body>
+</html>
